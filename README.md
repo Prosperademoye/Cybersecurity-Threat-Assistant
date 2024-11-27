@@ -48,27 +48,8 @@ Technology Stack
 Project Structure
 -----------------
 
-graphql
 
-`project-directory/
-│
-├── data/                   # Data folder for raw and processed datasets
-│   ├── raw/                # Raw PDFs and text reports
-│   ├── processed/          # Preprocessed data for NLP models
-│
-├── models/                 # Trained models (NER, classifiers)
-│
-├── app/                    # Streamlit app files
-│   ├── app.py              # Main app script
-│
-├── scripts/                # Scripts for preprocessing and training
-│   ├── preprocess.py       # Text preprocessing
-│   ├── ner_training.py     # Named Entity Recognition training
-│   ├── classification.py   # Threat classification model training
-│
-├── docs/                   # Documentation files
-├── requirements.txt        # Python dependencies
-├── README.md               # Overview of the project`
+
 
 * * * * *
 
@@ -79,8 +60,6 @@ Setup Instructions
 
 -   Python 3.8+
 -   Libraries: Install dependencies using:
-
-    bash
 
     `pip install -r requirements.txt`
 

@@ -50,8 +50,6 @@ Project Structure
 
 graphql
 
-Copy code
-
 `project-directory/
 │
 ├── data/                   # Data folder for raw and processed datasets
@@ -84,8 +82,6 @@ Setup Instructions
 
     bash
 
-    Copy code
-
     `pip install -r requirements.txt`
 
 -   APIs: Obtain API keys for:
@@ -105,7 +101,6 @@ Run `preprocess.py` to clean and tokenize data:
 
 bash
 
-Copy code
 
 `python scripts/preprocess.py`
 
@@ -117,7 +112,6 @@ Fine-tune an NER model using `ner_training.py`:
 
 bash
 
-Copy code
 
 `python scripts/ner_training.py`
 
@@ -127,8 +121,6 @@ Train a threat classifier using `classification.py`:
 
 bash
 
-Copy code
-
 `python scripts/classification.py`
 
 ### 5\. Running the Application
@@ -136,8 +128,6 @@ Copy code
 Run the Streamlit app to interact with the tool:
 
 bash
-
-Copy code
 
 `streamlit run app/app.py`
 
@@ -180,7 +170,6 @@ Features in Detail
 
         scss
 
-        Copy code
 
         `Threat Score = (CVE Severity * 0.5) + (System Count * 0.3) + Other Factors * 0.2`
 
@@ -205,8 +194,6 @@ Deployment
 -   Command to start API server:
 
     bash
-
-    Copy code
 
     `uvicorn app:app --reload`
 
@@ -250,4 +237,4 @@ Acknowledgments
 Contact
 -------
 
-For issues or enhancements, contact the developer via [GitHub Issues](https://github.com/your-repo/issues).
+For issues or enhancements, contact the developer prosperademoye@gmail.com

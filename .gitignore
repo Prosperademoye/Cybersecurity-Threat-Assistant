@@ -21,5 +21,7 @@ rad.json
 #Test results file
 TestResults.xml
 
+*.json
 message.txt
 midterm.pdf
+

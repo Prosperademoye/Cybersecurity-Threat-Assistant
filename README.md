@@ -203,6 +203,16 @@ Example Use Case
 3.  Classifies threats into severity levels and assigns a threat score.
 4.  Displays insights in an easy-to-read dashboard.
 
+### Example Scenario:
+
+An analyst in a mid-sized company receives weekly threat reports. Without the model, they spend hours reading reports, identifying key vulnerabilities, and determining what to prioritize. With the model:
+
+1.  They upload the reports into the system.
+2.  The model extracts malware names, CVEs, and affected systems.
+3.  It classifies threats into Critical, Medium, and Low severity.
+4.  A dashboard displays the most pressing issues and their threat scores.
+5.  The analyst quickly focuses on patching high-severity vulnerabilities and communicating actionable findings to the team.
+
 * * * * *
 
 Acknowledgments

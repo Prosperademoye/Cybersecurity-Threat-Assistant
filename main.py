@@ -6,6 +6,8 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+import spacy
+
 
 nltk.download('punkt')         # Tokenizer
 nltk.download('stopwords')     # Stopword list
@@ -69,6 +71,29 @@ def text_preprocessing(text):
     
     save_processed_data({"raw_text": lemmatized_array}, text_lemmatizer_output_path) # save th elemmatized output into a file
     return lemmatized_array # return the lemmatized array
+
+#NER
+def train_ner_model(data, labels, output_dir='ner_models'):
+    training_data = [] # this array is to hold formatted training data
+    for text, entities in zip(data, labels): #Zip the data and labels so we can loop through both of them at the same time. This loop is done because spacy need the labels in a specific format
+        ents = []
+        for entity in entities: #loop through labels
+            start = entity[0] # start is the first number in the tuple
+            end = entity[1] 
+            label = entity[2]
+            ents.append({"start": start, "end": end, "label": label}) 
+        training_data.append((text, {"entities": ents})) # Spacy need the labels in this format 
+    #So instead of [(12, 20, "MALWARE") we have {"start": 12, "end": 20, "label": "MALWARE"}. The latter is the format spacy expects
+    
+    nlp = spacy.blank("en") #initialize a new spacy model
+    if "ner" not in nlp.pipe_names: #Check if ner is already int he pipeline
+        ner = nlp.add_pipe("ner", last=True)
+    else: #if its not add it
+        ner = nlp.get_pipe("ner")
+    
+    
+    
+        
     
     
     

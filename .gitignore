@@ -26,3 +26,5 @@ message.txt
 midterm.pdf
 *.pdf
 
+ner_models/
+
